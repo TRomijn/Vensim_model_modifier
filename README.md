@@ -8,4 +8,4 @@ This 'package' contains functions that changes the text file for some basic chan
 ## Why do this?
 Changing the model via the text file can enable users that want to algorithmically change model structures to do this automatically annd for multiple variables consecutively.
 
-An usecase example: Automation of the Ford's behavioural approach to loop dominance. In combination with the SILS package (to find the Shortest Independent Loop Set) this package can be used to cut loops in a vensim model. A switch can be added to every loop in the SILS and by simulating the model by consecutively turning off loops, the effects of these loops on the model behaviour become apparent. 
+A usecase example: Automation of the Ford's behavioural approach to loop dominance. In combination with the SILS package (to find the Shortest Independent Loop Set) this package can be used to cut loops in a vensim model. A switch can be added to every loop in the SILS and by simulating the model by consecutively turning off loops, the effects of these loops on the model behaviour become apparent. 
