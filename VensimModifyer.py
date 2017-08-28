@@ -2,7 +2,6 @@
 Created on April 2017
 @author: TRomijn
 
-Purpose:
 '''
 
 

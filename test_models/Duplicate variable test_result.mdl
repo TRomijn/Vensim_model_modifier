@@ -5,7 +5,7 @@ inflow=
 	~		|
 
 outflow=
-	Var BDuplicate
+	Var B
 	~	
 	~		|
 

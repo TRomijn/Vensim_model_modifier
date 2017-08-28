@@ -47,8 +47,7 @@ def find_var_function(var, mdl_list):
         start_i
     except NameError:
         print(
-            "The variable you are looking for doesn't exist in the mdl file.",
-            "\nYou are probably trying to disable a loopset of the wrong Vensim Model"
+            "The variable you are looking for doesn't exist in the mdl file."
             )
     # find formula end
     for i2, line2 in enumerate(mdl_list[start_i:]):
