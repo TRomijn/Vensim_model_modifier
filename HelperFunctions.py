@@ -1,24 +1,8 @@
 '''
-Created on April 2017
+Created on April - August 2017
 
 @author: TRomijn
 '''
-
-# Two methods, Phaff and Huang
-
-# function - Phaff - one  edge
-#   input:
-#       from Var name
-#       To Var Name
-#       MDL filename
-#   do:
-#       Duplicate FromVar name -> FromVarDup
-#       VDup =  if time > x :
-#                   constant value
-#               else:
-#                   Orginial formal FromVar
-#   output:
-#   new file with
 
 
 __all__ = ['save_list_to_mdl', 'find_var_function']
@@ -173,17 +157,3 @@ def change_to_var_input(FromVar, FromVarDup, ToVar, mdl_list):
     # ....
 
     return x
-
-
-# TODO for Phaff
-def Deactivate_Loop_Phaff(FromVar, ToVar, filename):
-    '''
-    This function modifies a MDL file to deactive a loop
-    via the edge FromVar - ToVar
-    input:
-    FromVar: string with the node (variable name) where the edge starts
-    ToVar: string with the node (variable name) where the edge ends
-    '''
-    # TEST
-    print(FromVar, ToVar, filename)
-    return

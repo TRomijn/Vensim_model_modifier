@@ -1,10 +1,12 @@
+Sketch information:
+
 10,124,test1,170,495,17,11,8,3,0,0,0,0,0,0
 10 = variable that should be shown
 124 = number of variable (max 100 larger than the previous)
 test1 = variable name
-8 = auxilary, but if put 3: stock
 170,495 = x,y
 17,11 = height,widhth (or the otherway around)
+8 = auxilary, but if put 3: stock
 
 
 

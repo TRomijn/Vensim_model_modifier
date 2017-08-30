@@ -1,19 +1,23 @@
 '''
-Created on April 2017
+Created on April - August 2017
 @author: TRomijn
 
 '''
+import HelperFunctions as hf
+from HelperFunctions import read_mdl_file, save_list_to_mdl
 
 
 # TODO: View1, think of solution. Not each model might have a View 1
-def AddVariable(VarName, RHS, mdl_list, Gaming=False, view="View 1"):
+def AddVariable(VarName, RHS, model, Gaming=False, view="View 1"):
     '''
     VarName: string
     RHS: right-hand side of formula: String
+    model: list object (use read_mdl_file)
     Gaming: Boolean
-    mdl_list: list of the Vensim File
+    view: string
     '''
     # Create formula
+    mdl_list = model    # legacy workaround
     Formula = [
         "{var}={game}\n".format(var=VarName, game=" GAME (" if Gaming == True else ""),
         RHS + "{}\n".format(")" if Gaming == True else ""),
@@ -49,6 +53,22 @@ def AddVariable(VarName, RHS, mdl_list, Gaming=False, view="View 1"):
     mdl_list[i3:i3] = [new_sketch_line]
     # ]
     return mdl_list
+
+
+def duplicate_variable(model, Orig_Var):
+    """
+    model: List (the opened MDL file)
+    orig_var: The to be duplicated variable
+
+    returns the new model as a list (which can be saved)
+    """
+    # Find formula start and end.
+    i_start, i_end = hf.find_var_function(Orig_Var, model)
+    # duplicate formula of a variable
+    new_mdl_list = hf.duplicate_formula(Orig_Var, i_start, i_end, model)
+    # Add sketch information
+    new_mdl_list = hf.add_to_vensim_sketch(Orig_Var, new_mdl_list)
+    return new_mdl_list
 
 
 # Find formula of a variable
